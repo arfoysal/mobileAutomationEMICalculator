@@ -11,9 +11,10 @@ import utilities.DataSet;
 public class TC_02_EMICalculatorTest extends Base {
 
 	@Test(dataProvider = "data", dataProviderClass = DataSet.class)
-	public void emiCalculate(long loan, double interest, int periodYears, double pFee, long mEMI, long tInterest, long tpFee, long tPayment) throws InterruptedException {
+	public void emiCalculate(long loan, double interest, int periodYears, double pFee, long mEMI, long tInterest,
+			long tpFee, long tPayment) throws InterruptedException {
 		P2_EMI_CalculatorPage calculatorPage = new P2_EMI_CalculatorPage();
-		
+
 		calculatorPage.calculateEMI(loan, interest, periodYears, pFee);
 		long[] actualValues = calculatorPage.getActualResults();
 		assertEquals(actualValues[0], mEMI);

@@ -5,7 +5,6 @@
 		<classes>
 			<class name="testcases.TC_01_HomePageTest" />
 			<class name="testcases.TC_02_EMICalculatorTest" />
-
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

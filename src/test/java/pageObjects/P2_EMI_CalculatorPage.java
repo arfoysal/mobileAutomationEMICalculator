@@ -53,7 +53,8 @@ public class P2_EMI_CalculatorPage extends Utilities {
 	@AndroidFindBy(id = "com.continuum.emi.calculator:id/total_payment_result")
 	public WebElement totalPaymentElement;
 
-	public void calculateEMI(long amount, double interestRate, int years, double processongFee) throws InterruptedException {
+	public void calculateEMI(long amount, double interestRate, int years, double processongFee)
+			throws InterruptedException {
 		emiRadioBtnElement.click();
 		amountElement.sendKeys(Long.toString(amount));
 		interestElement.sendKeys(Double.toString(interestRate));
